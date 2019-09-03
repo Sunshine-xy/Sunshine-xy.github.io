@@ -102,13 +102,13 @@ friends: [
         title: "WY",
         href: "http://zhengwuyang.com"
     },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "简书",
+        href: "https://www.jianshu.com/u/32753465dde1"
     },{
-        title: "Apple",
-        href: "https://apple.com"
+        title: "CSDN",
+        href: "https://i.csdn.net/#/uc/profile"
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "掘金",
+        href: "https://juejin.im/user/5d6dd5186fb9a06ae17d92e0/"
     }
 ]
