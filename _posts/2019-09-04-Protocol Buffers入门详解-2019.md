@@ -97,12 +97,13 @@ message Person {
 ## 3. Protobuf存储原理和压缩原理
 ### 3.1 存储原理
 &emsp;&emsp;protobuf对不同对数据类型进行分类，分别为其选择不同对存储格式，不过多数数据对存储格式都是键值对的key-value形式。protobuf将所有数据类型分为了一下几类：
-type|meaning| used for|
---|:--:|---:
- 0|varint|int32,int64,uint32,uint64,sint32,sint64,bool,enum
- 1|64-bit|fixed64,sfixed64,double
- 2|Length-delimited|string,bytes,embedded message,packed repeated fields
- 5|32-bit|fixed32,sfixed32,float
+|type|meaning| used for|
+|--|:--:|---:|
+|0|varint|int32,int64,uint32,uint64,sint32,sint64,bool,enum|
+|1|64-bit|fixed64,sfixed64,double|
+|2|Length-delimited|string,bytes,embedded message,packed repeated fields|
+|5|32-bit|fixed32,sfixed32,float|
+ 
  &emsp;&emsp;其中类型3、4已经在proto3中被弃用，故不列出。除了类型2的数据之外的三个类型全部是由k-v形式存储，类型2数据由于长度不定，所以在存储的时候还需要加入一个length指标，以**k-l-v**的形式存储。
 
  &emsp;&emsp;对于message这种结构体数据，protobuf把message中所有字段的数据表示成k-v/k-l-v形式后拼接在一起，减少分隔符所占用的空间。这样一来有个问题出现了，那就是如何在一长串的拼接起来的二进制数据中找到对应的field？，并且还要确定该field是k-v存储还是k-l-v存储的呢？
@@ -153,13 +154,13 @@ message Test2 {
 &emsp;&emsp;**表达能力差**：无法描述数据结构，无法对标记文档（html等）建模
 
 ## 5. 与其他序列化协议比较
-&emsp;&emsp;|protobuf| JSON|XML|Lua
---|:--:|---:|---:|---:
-数据结构支持|较复杂结构|简单结构|复杂结构|复杂结构
-数据存储方式|二进制|文本|文本|文本
-数据压缩大小|小|一般|大|一般
-编码解码效率|快|一般|慢|稍快
-编程语言支持|C++/Python/Java|很多|很多|很多
-开发难度|简单|简单|繁琐|相对繁琐
-学习成本|低|低|低|高
-适用范围|数据交换|数据交换|数据交换|数据保存及脚本处理
+|&emsp;&emsp;|protobuf| JSON|XML|Lua|
+|--|:--:|---:|---:|---:|
+|数据结构支持|较复杂结构|简单结构|复杂结构|复杂结构|
+|数据存储方式|二进制|文本|文本|文本|
+|数据压缩大小|小|一般|大|一般|
+|编码解码效率|快|一般|慢|稍快|
+|编程语言支持|C++/Python/Java|很多|很多|很多|
+|开发难度|简单|简单|繁琐|相对繁琐|
+|学习成本|低|低|低|高|
+|适用范围|数据交换|数据交换|数据交换|数据保存及脚本处理|
