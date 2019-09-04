@@ -1,10 +1,10 @@
 # Site settings
-title: XY Blog
-SEOTitle: 徐阳的博客 | XY Blog
+title: Sunshine Blog
+SEOTitle: 徐阳的博客 | Sunshine Blog
 header-img: img/404-bg-desk.jpg
 email: 275303974@qq.com
 description: "Every failure is leading towards success."
-keyword: "XY, XY Blog, 徐阳的博客"
+keyword: "Sunshine, Sunshine Blog, 徐阳的博客"
 url: "http://Sunshine-xy.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/Sunshine-xy/Sunshine-xy.github.io.git" # you code repository
