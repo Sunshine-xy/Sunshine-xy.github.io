@@ -11,6 +11,7 @@ tags:								#标签
 ---
 
 # Protocol Buffers 入门详解
+@[TOC]
 ## 1. 概念
 ### 1.1 What?（什么是Protocol Buffers？）
 &emsp;&emsp;Protocol Buffers(后面简称protobuf)是google团队开发的一种语言中立，平台无关，可扩展的数据压缩编码方式（序列化），其很适合做数据存储或RPC数据交换格式。可用于通讯协议、数据存储等领域的语言无关、平台无关、可扩展的序列化结构数据格式。目前提供了 C++、Java、Python 三种语言的 API。
