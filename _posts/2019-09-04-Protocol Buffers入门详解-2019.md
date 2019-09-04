@@ -97,6 +97,7 @@ message Person {
 ## 3. Protobuf存储原理和压缩原理
 ### 3.1 存储原理
 &emsp;&emsp;protobuf对不同对数据类型进行分类，分别为其选择不同对存储格式，不过多数数据对存储格式都是键值对的key-value形式。protobuf将所有数据类型分为了一下几类：
+
 |type|meaning| used for|
 |--|:--:|---:|
 |0|varint|int32,int64,uint32,uint64,sint32,sint64,bool,enum|
@@ -154,6 +155,7 @@ message Test2 {
 &emsp;&emsp;**表达能力差**：无法描述数据结构，无法对标记文档（html等）建模
 
 ## 5. 与其他序列化协议比较
+
 |&emsp;&emsp;|protobuf| JSON|XML|Lua|
 |--|:--:|---:|---:|---:|
 |数据结构支持|较复杂结构|简单结构|复杂结构|复杂结构|
