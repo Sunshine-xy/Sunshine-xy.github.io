@@ -1,6 +1,5 @@
 ---   				    
-layout:     keynote     # 使用的布局（不需要改）
-iframe:     "http://huangxuan.me/js-module-7day/"
+layout:     post     # 使用的布局（不需要改）
 title:      Protocol Buffers 				# 标题 
 subtitle:   入门详解 #副标题
 date:       2019-09-04 				# 时间
