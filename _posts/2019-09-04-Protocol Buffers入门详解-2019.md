@@ -10,8 +10,29 @@ tags:								#标签
     - Java开发
 ---
 
+- [Protocol Buffers 入门详解](#protocol-buffers-入门详解)
+    - [1. 概念](#1-概念)
+            - [1.1 What?（什么是Protocol Buffers？）](#11-what什么是protocol-buffers)
+            - [1.2 Why?（为什么使用Protocol Buffers？）](#12-why为什么使用protocol-buffers)
+            - [1.3 How?（Protocol Buffers 是怎么做到的？）](#13-howprotocol-buffers-是怎么做到的)
+    - [2.protobuf文件中的语法规范](#2protobuf文件中的语法规范)
+            - [2.1 message结构](#21-message结构)
+            - [2.2 enum类型](#22-enum类型)
+            - [2.3 Service接口](#23-service接口)
+            - [2.4 命名规范](#24-命名规范)
+            - [2.5 特殊情况](#25-特殊情况)
+                        - [2.5.1 为已弃用的field保存field id](#251-为已弃用的field保存field-id)
+    - [3. Protobuf存储原理和压缩原理](#3-protobuf存储原理和压缩原理)
+            - [3.1 存储原理](#31-存储原理)
+                        - [3.1.1 varint类型存储（type=0）](#311-varint类型存储type0)auto            - [3.1.2 32/64-bit类型存储（type=1、type=5）](#312-3264-bit类型存储type1type5)
+                        - [3.1.2 Length-delimited类型存储（type=2）](#312-length-delimited类型存储type2)
+            - [3.2 压缩原理](#32-压缩原理)
+    - [4. Protobuf的特点](#4-protobuf的特点)
+            - [4.1 优点](#41-优点)
+            - [4.2 缺点](#42-缺点)
+    - [5. 与其他序列化协议比较](#5-与其他序列化协议比较)
+    
 # Protocol Buffers 入门详解
-@[TOC]
 ## 1. 概念
 ### 1.1 What?（什么是Protocol Buffers？）
 &emsp;&emsp;Protocol Buffers(后面简称protobuf)是google团队开发的一种语言中立，平台无关，可扩展的数据压缩编码方式（序列化），其很适合做数据存储或RPC数据交换格式。可用于通讯协议、数据存储等领域的语言无关、平台无关、可扩展的序列化结构数据格式。目前提供了 C++、Java、Python 三种语言的 API。
