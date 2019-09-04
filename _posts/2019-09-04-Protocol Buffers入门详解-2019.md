@@ -13,7 +13,9 @@ tags:								#标签
 - [Protocol Buffers 入门详解](#protocol-buffers-入门详解)
     - [1. 概念](#1-概念)
             - [1.1 What?（什么是Protocol Buffers？）](#11-what什么是protocol-buffers)
+            
             - [1.2 Why?（为什么使用Protocol Buffers？）](#12-why为什么使用protocol-buffers)
+            
             - [1.3 How?（Protocol Buffers 是怎么做到的？）](#13-howprotocol-buffers-是怎么做到的)
     - [2.protobuf文件中的语法规范](#2protobuf文件中的语法规范)
             - [2.1 message结构](#21-message结构)
